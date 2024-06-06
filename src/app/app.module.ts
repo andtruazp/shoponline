@@ -9,6 +9,7 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegisterComponent } from './componentes/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     PrimengModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
     
   ],
   providers: [
