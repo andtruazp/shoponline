@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegisterComponent } from './componentes/register/register.component';
 import { ProductoListaComponent } from './componentes/producto-lista/producto-lista.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { authGuard } from './guardias/auth.guard';
 
 const routes: Routes = [
   {
@@ -15,8 +17,15 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: ProductoListaComponent
+    component: HomeComponent,
+    canActivate: [authGuard]
+  },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
   }
+  
 ];
 
 @NgModule({
