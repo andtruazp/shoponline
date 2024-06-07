@@ -1,3 +1,10 @@
 {
-    "users": []
+  "users": [
+    {
+      "id": "6732",
+      "fullName": "Andrea Trujillo Azpeitia",
+      "email": "andreatrujilloazp@gmail.com",
+      "password": "emperador.11P"
+    }
+  ]
 }
