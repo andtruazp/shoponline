@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm" (ngSubmit)="login()">
     <p-card header="Ingresar al sistema" [style]="{ width: '360px' }">
         <div class="field">
             <label for="email">Correo Electronico</label>
@@ -33,7 +33,7 @@
             <div *ngIf="password.errors?.['special']">Debe contener al menos un carácter especial</div>
             <div *ngIf="password.errors?.['minlength']">Debe tener una longitud mínima de ocho caracteres</div>
           </small>
-        <p-button label="Ingresar" styleClass="w-full" [disabled]="loginForm.invalid"></p-button>
+        <p-button label="Ingresar" styleClass="w-full" [disabled]="loginForm.invalid" type="submit"></p-button>
         <div class="mt-2">
             ¿No eres miembro? <a routerLink="/register">Registrate</a>
         </div>

@@ -14,7 +14,7 @@ const routes: Routes = [
     component: RegisterComponent 
   },
   {
-    path: '',
+    path: 'home',
     component: ProductoListaComponent
   }
 ];
