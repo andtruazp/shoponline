@@ -9,9 +9,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegisterComponent } from './componentes/register/register.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
+import { ProductosComponent } from './componentes/productos/productos.component';
+import { AddProductoComponent } from './componentes/producto/add-producto/add-producto.component';
+import { RatingModule } from 'primeng/rating';
 
 @NgModule({
   declarations: [
@@ -19,15 +22,19 @@ import { HomeComponent } from './componentes/home/home.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    ProductosComponent,
+    AddProductoComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     PrimengModule,
+    FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RatingModule
     
   ],
   providers: [
