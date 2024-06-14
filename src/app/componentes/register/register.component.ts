@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, ValidationErrors, Validators } from '@angular/forms';
 import { passwordMatchValidator } from '../../shared/password-match.directives';
 import { AuthService } from '../../servicios/auth.service';
 import { MessageService } from 'primeng/api';
@@ -15,7 +15,7 @@ export class RegisterComponent {
   registerForm = this.fb.group({
   fullName: ['',Validators.required],
   email: ['', [Validators.required, Validators.email]],
-  password:['', [Validators.required, /*Validators.pattern(/^(?=.*\d) (?=.*[a-z])(?=.*[A-Z])[0-9a-zA-z](8,)$/)*/]],
+  password:['', [Validators.required, this.passwordValidator]],
   confirmPassword: ['', Validators.required]
   },{
     validators: passwordMatchValidator
@@ -25,6 +25,29 @@ export class RegisterComponent {
     private messageService: MessageService, private router:Router,
     private mensaje: MessageService
   ){}
+
+  passwordValidator(control: AbstractControl): ValidationErrors | null {
+    const value: string = control.value || '';
+    let errors = {};
+
+    if (!/[a-z]/.test(value)) {
+      errors = { ...errors, lowercase: true };
+    }
+
+    if (!/[A-Z]/.test(value)) {
+      errors = { ...errors, uppercase: true };
+    }
+
+    if (!/[^A-Za-z0-9]/.test(value)) {
+      errors = { ...errors, special: true };
+    }
+
+    if (value.length < 8) {
+      errors = { ...errors, minlength: true };
+    }
+
+    return Object.keys(errors).length > 0 ? errors : null;
+  }
 
   get fullName() {
     return this.registerForm.controls['fullName'];

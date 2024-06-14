@@ -6,5 +6,79 @@
       "email": "andreatrujilloazp@gmail.com",
       "password": "emperador.11P"
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "codigo": "P001",
+      "nombre": "Laptop",
+      "descripcion": "Laptop de alto rendimiento para trabajos de oficina y juegos",
+      "precio": 1200,
+      "imagen": "laptop.jpg",
+      "categoria": "Electronics",
+      "cantidad": 50,
+      "estadoInventario": "INSTOCK",
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "codigo": "P002",
+      "nombre": "Smartphone",
+      "descripcion": "Smartphone con la última tecnología y características avanzadas",
+      "precio": 800,
+      "imagen": "smartphone.jpg",
+      "categoria": "Electronics",
+      "cantidad": 30,
+      "estadoInventario": "LOWSTOCK",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "codigo": "P003",
+      "nombre": "Headphones",
+      "descripcion": "Auriculares con cancelación de ruido para una experiencia de audio inmersiva",
+      "precio": 200,
+      "imagen": "headphones.jpg",
+      "categoria": "Accessories",
+      "cantidad": 100,
+      "estadoInventario": "INSTOCK",
+      "rating": 4.7
+    },
+    {
+      "id": 4,
+      "codigo": "P004",
+      "nombre": "Smartwatch",
+      "descripcion": "Reloj inteligente con monitoreo de salud y funciones deportivas",
+      "precio": 250,
+      "imagen": "smartwatch.jpg",
+      "categoria": "Accessories",
+      "cantidad": 10,
+      "estadoInventario": "OUTOFSTOCK",
+      "rating": 4.2
+    },
+    {
+      "id": 5,
+      "codigo": "P005",
+      "nombre": "Tablet",
+      "descripcion": "Tableta de alto rendimiento con pantalla de alta resolución",
+      "precio": 500,
+      "imagen": "tablet.jpg",
+      "categoria": "Electronics",
+      "cantidad": 20,
+      "estadoInventario": "INSTOCK",
+      "rating": 4.3
+    },
+    {
+      "id": 0,
+      "codigo": "1234",
+      "nombre": "Playera",
+      "descripcion": "mdlfkdfklfd",
+      "precio": "50.00",
+      "imagen": "playera.jpg",
+      "categoria": "Ropa",
+      "cantidad": "5",
+      "estadoInventario": "instock",
+      "rating": "4"
+    }
   ]
 }

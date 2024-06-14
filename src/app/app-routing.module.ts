@@ -5,6 +5,8 @@ import { RegisterComponent } from './componentes/register/register.component';
 import { ProductoListaComponent } from './componentes/producto-lista/producto-lista.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { authGuard } from './guardias/auth.guard';
+import { AddProductoComponent } from './componentes/producto/add-producto/add-producto.component';
+import { ProductosComponent } from './componentes/productos/productos.component';
 
 const routes: Routes = [
   {
@@ -19,6 +21,14 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     canActivate: [authGuard]
+  },
+  {
+    path: 'add',
+    component: AddProductoComponent
+  },
+  {
+    path: 'product',
+    component: ProductosComponent
   },
   {
     path: '',
